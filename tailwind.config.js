@@ -16,7 +16,7 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
 
-    // !ADD EVERYTHING INSIDE HERE
+    //! ADD EVERYTHING INSIDE HERE
     extend: {
       fontSize: { ...appendUnitToValues(tailwindShared.fontSizes, 'px') },
       borderRadius: { ...appendUnitToValues(tailwindShared.radius, 'px') },

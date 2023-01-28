@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    // ...OTHER OPTIONS
+    "allowJs": true,
+    "esModuleInterop": true,
+    // ...
+  },
+  // ...
+}

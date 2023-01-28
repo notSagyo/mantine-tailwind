@@ -26,7 +26,9 @@ import themeOverride from './theme/mantine-theme'; // OR your path to the file
 </MantineProvider>;
 ```
 
-- OPTIONAL: Add the `styles/globals.css` to you project. (It's just Tailwind's default file without @tailwind/base)
+- You'll probably need to set `"allowJs": true` and `"esModuleInterop": true` as shown in this project's `tsconfig.json`
+
+- OPTIONAL - Add the `styles/globals.css` to you project. (It's just Tailwind's default file without @tailwind/base)
 
 If you want to use another path for the theme file (ie. `src/theme`), you only need to update the `tailwind.config.js` to require the new path (ie. the new require would point to `src/theme/tailwind-shared`)
 
