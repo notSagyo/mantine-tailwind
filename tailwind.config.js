@@ -1,8 +1,6 @@
-const colors = require('tailwindcss/colors');
-
-//! ADD THESE. IF YOU'RE USING SRC FOLDER, CHANGE THE PATH
+//! ADD THESE REQUIRES. IF YOU'RE USING SRC FOLDER, CHANGE THE PATH
 const tailwindShared = require('./theme/tailwind-shared');
-const { DEFAULT_THEME: { colors: mantineColors } } = require('@mantine/core');
+const { DEFAULT_THEME: { colors: mantineColors }, } = require('@mantine/core');
 
 //! ADD THIS HELPER FUNCTION
 const appendUnitToValues = (obj, unit) => ({
@@ -13,12 +11,11 @@ const appendUnitToValues = (obj, unit) => ({
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  theme: {
+  // ...
 
-    //! ADD EVERYTHING INSIDE HERE
+  //! ADD EVERYTHING INSIDE HERE
+  theme: {
     extend: {
-      fontSize: { ...appendUnitToValues(tailwindShared.fontSizes, 'px') },
       borderRadius: { ...appendUnitToValues(tailwindShared.radius, 'px') },
       screens: { ...appendUnitToValues(tailwindShared.breakpoints, 'px') },
       margin: { ...appendUnitToValues(tailwindShared.spacing, 'px') },
@@ -29,7 +26,7 @@ module.exports = {
         primary: colors[tailwindShared.PRIMARY_COLOR],
       },
     },
-
   },
-  plugins: [],
+
+  // ...
 };

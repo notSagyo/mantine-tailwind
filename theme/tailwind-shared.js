@@ -21,5 +21,4 @@ module.exports = {
   breakpoints: DEFAULT_THEME.breakpoints,
   spacing: DEFAULT_THEME.spacing,
   radius: DEFAULT_THEME.radius,
-  fontSizes: DEFAULT_THEME.fontSizes,
 };

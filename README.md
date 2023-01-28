@@ -26,7 +26,7 @@ import themeOverride from './theme/mantine-theme'; // OR your path to the file
 </MantineProvider>;
 ```
 
-- You'll probably need to set `"allowJs": true` and `"esModuleInterop": true` as shown in this project's `tsconfig.json`
+- You'll probably need to set `"allowJs": true` and `"esModuleInterop": true` as shown in this project's `tsconfig.json` and use at least TypeScript 4.9
 
 - OPTIONAL - Add the `styles/globals.css` to you project. (It's just Tailwind's default file without @tailwind/base)
 
