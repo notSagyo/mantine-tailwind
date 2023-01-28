@@ -1,0 +1,4 @@
+/** Tailwind base messes up some mantine styles, use with discretion */
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
