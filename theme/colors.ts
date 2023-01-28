@@ -6,7 +6,7 @@
 
 import { DefaultMantineColor, DEFAULT_THEME, Tuple } from '@mantine/core';
 import tailwindColors from 'tailwindcss/colors';
-import tailwindShared from './tailwind-shared-typed';
+import tailwindShared from './tailwind-shared';
 
 export type TailwindColor = keyof Omit<
   typeof tailwindColors,
@@ -19,13 +19,11 @@ export type Shade = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
  * Tailwind colors: { color: { "50": "#NNNNNN", ... } } \
  * in mantine notation: { color: [#NNNNNN], ... }
  */
-const tailwindColorsForMantine: Record<TailwindColor, Tuple<string, 10>> = {
-  ...Object.fromEntries(
-    Object.entries(tailwindColors)
-      .map(([key, value]) => (typeof value === 'object' ? [key, Object.values(value)] : []))
-      .filter((elem) => elem[0] != null)
-  ),
-};
+const tailwindColorsForMantine: Record<TailwindColor, Tuple<string, 10>> = Object.fromEntries(
+  Object.entries(tailwindColors)
+    .filter(([, value]) => typeof value === 'object')
+    .map(([key, value]: any) => [key, Object.values(value)])
+);
 
 const colors = {
   ...DEFAULT_THEME.colors,

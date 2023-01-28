@@ -38,14 +38,18 @@ The necessary code from [tailwind.config.js](tailwind.config.js) is: require `ta
 
 ## Share values between libraries
 
+### Add / modify a shared value
+
 Doing the steps above already fix some inconsistencies between the libraries. But you can add/modify anything to be shared:
 
 1. Add it to the [tailwind-shared.js](theme/tailwind-shared.js) file
-2. Use it on [mantine-theme.ts](theme/mantine-theme.ts) as you need it, and do the same on [tailwind.config.js](tailwind.config.js)
+2. Acess it from [mantine-theme.ts](theme/mantine-theme.ts) `tailwindShared` object and use it as you need it, do the same for [tailwind.config.js](tailwind.config.js)
 
 Now you will get consistent type hints both for Mantine and Tailwind
 
-If you need some complex typings you can't do with `@type`, you can redefine the property for your `.ts` files on [tailwind-shared-typed.ts](theme/tailwind-shared-typed.ts). Example provided
+### Add a new color
+
+Create an array of 10 strings into [tailwind-shared.js](theme/tailwind-shared.js) `customColors` without need to do anything else
 
 ## Add / Modify values only for Mantine / Tailwind
 

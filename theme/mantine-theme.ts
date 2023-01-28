@@ -1,6 +1,6 @@
 import { MantineThemeOverride, Tuple } from '@mantine/core';
 import colors, { Color, Shade } from './colors';
-import tailwindShared from './tailwind-shared-typed';
+import tailwindShared from './tailwind-shared';
 
 declare module '@mantine/core' {
   export interface MantineThemeColorsOverride {

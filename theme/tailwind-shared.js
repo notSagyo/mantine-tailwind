@@ -2,7 +2,7 @@ const { DEFAULT_THEME } = require('@mantine/core');
 
 module.exports = {
   /** @type { import('./colors/tailwind-colors').TailwindColor | import('@mantine/core').DefaultMantineColor} */
-  PRIMARY_COLOR: 'amber',
+  PRIMARY_COLOR: 'example',
   customColors: {
     /** @type { import('@mantine/core').Tuple<string, 10> } */
     example: [
